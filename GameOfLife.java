@@ -1,10 +1,3 @@
-/**
- * Game of Life Simulation
- * AP Computer Science A Assignment
- *
- * This program simulates Conway's Game of Life on a 20x20 grid
- * for 5 generations and provides statistics about the final state.
- */
 public class GameOfLife {
     private static final int SIZE = 20;
     private static final int GENERATIONS = 5;
@@ -15,10 +8,6 @@ public class GameOfLife {
         initializeGrid();
     }
 
-    /**
-     * Initializes the grid with generation 0.
-     * This sets up the initial pattern of living organisms.
-     */
     private void initializeGrid() {
         // Initialize all cells as empty
         for (int i = 0; i < SIZE; i++) {
@@ -31,14 +20,12 @@ public class GameOfLife {
         // This pattern is based on a typical Game of Life configuration
         // You can modify this to match the specific pattern from the assignment image
 
-        // Glider pattern (top left)
         grid[1][2] = "*";
         grid[2][3] = "*";
         grid[3][1] = "*";
         grid[3][2] = "*";
         grid[3][3] = "*";
 
-        // Blinker pattern (middle)
         grid[9][9] = "*";
         grid[9][10] = "*";
         grid[9][11] = "*";
